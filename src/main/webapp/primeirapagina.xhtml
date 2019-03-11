@@ -18,19 +18,19 @@ and open the template in the editor.
             Nome:
             <h:inputText id="nome" value="${pessoaBean.nome}"/>
 
-            <br/>
+            <h:commandButton value="add nome" action="#{pessoaBean.addNome}"/>
+           
+            
+            <h:dataTable value="#{pessoaBean.nome}" var="nome">
+                <h:column>
+                    <h:outputText value="#{nome}"/>
+                </h:column>
+            </h:dataTable>
                 
-            Sobrenome:
-            <h:inputText id="sobrenome" value="${pessoaBean.sobrenome}"/>
-            <br/>
                 
-             <h:outputText value="${pessoaBean.nomeCompleto}" />
-             
-             <br/>
-                 
-                 <h:commandButton value="Mostrar nome" action="#{pessoaBean.montarNome()}"/>
-         
+
         </h:form>    
 
     </h:body>
+    
 </html>
